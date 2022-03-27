@@ -62,7 +62,7 @@ loop:
     jal x0, loop
 exit:
     add a0, x0, s0
-    # BEGIN EPILOGUE
+    # BEGIN EPILOGUE              00000
     lw s0, 0(sp)
     lw s1, 4(sp)
     lw s2, 8(sp)
