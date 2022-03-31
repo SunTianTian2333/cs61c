@@ -101,7 +101,18 @@ main:
 # a1 is the address of the "output" array (defined above).
 f:
     # YOUR CODE GOES HERE!
-
+    addi sp,sp,-8
+    sw t1,0(sp)
+    sw a1,4(sp)
+    li t1, 3
+    add a0,t1,a0        #a0 is the offset
+    add a0,a0,a0
+    add a0,a0,a0
+    add a1,a0,a1
+    lw a0,0(a1)
+    lw t1,0(sp)
+    lw a1,4(sp)
+    addi sp,sp,8
     jr ra               # Always remember to jr ra after your function!
 
 # prints out one integer
